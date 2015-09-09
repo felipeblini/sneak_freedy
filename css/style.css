@@ -1,0 +1,97 @@
+body {
+    background: #f7c613 url('../images/sneaky_site_bg.jpg') no-repeat top center;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+.body-other {
+    background: #f7c613 url('../images/sneaky_site_bg2.jpg') no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2 {
+    color: #633996;
+    text-transform: uppercase;
+}
+
+.navbar {
+    background: url('../images/top-bar.png') repeat-x top center;
+    height: 120px;
+    border: 0;
+
+
+}
+
+.container-long {
+    background-color: rgba(255,255,255,0.7);
+}
+
+.content {
+    padding: 40px 15px;
+
+    font-size: 16px;
+}
+
+.content-long {
+    padding: 80px 0px;
+
+    height: 88vh;
+
+
+    overflow: hidden;
+    width: 80%;
+    margin: 120px auto 0px auto;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.impressum {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { background: none !important; }
+.mCSB_scrollTools .mCSB_draggerRail { background: none !important; }
+.mCSB_scrollTools .mCSB_buttonUp {
+    color: rgba(255,255,255, 1);
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav>li>a.logo-home {
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 0;
+    }
+
+    .navbar-nav>li>a.logo-facebook {
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 80px;
+    }
+
+    .navbar-nav>li>a {
+        padding: 0 30px 0 30px;
+        line-height: 80px;
+
+        color: #633996 !important;
+        font-size: x-large;
+
+    }
+}
