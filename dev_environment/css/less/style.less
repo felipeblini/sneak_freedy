@@ -1,3 +1,98 @@
+body {
+    background-color: #E9722A;   
+    -webkit-font-smoothing: antialiased;
+}
+
+.body-other {
+    background: url('../img/sneaky_site_bg2.jpg') no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container-sneak-freddy {
+    margin-top: -20px !important;
+}
+
+    .container-sneak-freddy div img {
+        width: 100%
+    }
+    
+h2 {
+    color: #633996;
+    text-transform: uppercase;
+}
+
+.navbar {
+    background: url('../img/top-bar.png') repeat-x top center;
+    height: 120px;
+    border: 0;
+}
+
+.container-long {
+    background-color: rgba(255,255,255,0.7);
+}
+
+.content {
+    padding: 40px 15px;
+    font-size: 16px;
+}
+
+.content-long {
+    padding: 80px 0px;
+    height: 88vh;
+    overflow: hidden;
+    width: 80%;
+    margin: 120px auto 0px auto;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.impressum {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+
+.navbar-inverse .navbar-toggle {
+    background: #633996 !important;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { background: none !important; }
+.mCSB_scrollTools .mCSB_draggerRail { background: none !important; }
+.mCSB_scrollTools .mCSB_buttonUp {
+    color: rgba(255,255,255, 1);
+}
+
+.navbar-nav > li > a {
+    color: #633996 !important;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #fff;
+}
+
+.navbar-nav > li > a.logo-home > img {
+    width: 255px;
+}
+
+.logo-home-brand img {
+    width: 50px;
+    margin-top: -8px;
+}
+
+.impressum, .navbar-brand  {
+    display: none;
+}
+
+
+/************************************************ Breakpoits
+*****************************/
+
 @media (max-width: 1282px) {
     .navbar-nav > li > a.logo-home > img {
         width: 200px;
@@ -76,7 +171,11 @@
 }
 
 @media (max-width: 767px) {
-     .navbar-nav {
+    body {
+        background-color: #583E7A;   
+    }
+    
+    .navbar-nav {
         background: #efefef !important;
         margin-top: 0px
     }
@@ -86,24 +185,16 @@
         border-bottom: 1px solid #dcdcdc;
     }
     
-    .navbar-nav > li > a.logo-home {
-        display: none;
-    }
-    
     .impressum, .navbar-brand {
         display: block;
     }
     
-    .navbar-nav >li > a.logo-facebook > img {
+    .navbar-nav > li > a.logo-facebook > img, .navbar-nav > .li-logo-home, .desktop-version {
         display: none;
     }
     
-    .mobile {
+    .mobile-version {
         display: block;
-    }
-    
-    .desktop {
-        display: none;
     }
 }
 
@@ -148,11 +239,11 @@
         font-size: x-large;
     }
     
-    .mobile {
+    .mobile-version {
         display: none;
     }
     
-    .desktop {
+    .desktop-version {
         display: block;
     }
 }
@@ -166,5 +257,20 @@
 @media (max-width: 863px) {
     .container-sneak-freddy div.first {
         margin-top: 30px !important;
+    }
+}
+
+/*************************************************** Mobile Breakpoints
+************************************/
+
+@media (max-width: 767px) {
+    .container-sneak-freddy div.first {
+        margin-top: 70px !important;
+    }
+}
+
+@media (max-width: 364px) {
+    .container-sneak-freddy div.first {
+        margin-top: 70px !important;
     }
 }
