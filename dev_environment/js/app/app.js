@@ -5,23 +5,27 @@
             scrollButtons: { enable: true },
             theme: "light-3",
         });
+        
+        setUpClickToSms();
     });
 })(jQuery);
 
-function clickToSms() {
+function setUpClickToSms() {
     var md = new MobileDetect(window.navigator.userAgent);
-    var clickToText = 'sms:68666';
+    var clickToText = 'sms:82888';
     var ua = navigator.userAgent;
-
+    var body = "ASKBUDDY";
+    
     if(md.os() == 'AndroidOS') {
-        clickToText = 'sms:68666?body=ASKBUDDY'
+        clickToText = 'sms:82888?body=' + body;
     } else if(md.os() == 'iOS') {
         if(md.version('Version') == '8')
-            clickToText = 'sms:68666&body=ASKBUDDY';
+            clickToText = 'sms:82888&body=' + body;
         else
-            clickToText = 'sms:68666;body=ASKBUDDY';
+            clickToText = 'sms:82888;body=' + body;
     } else {
-        clickToText = 'sms:68666?body=ASKBUDDY';
+        clickToText = 'sms:82888?body=' + body;
     }
+    
     $('#mobile-send').attr('href', clickToText);
 }
