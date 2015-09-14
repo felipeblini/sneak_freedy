@@ -1,3 +1,18 @@
+@content-font-size: 1em;
+
+@nav-bar-font-size: 1em;
+@nav-bar-link-line-height: 10px;
+@nav-bar-link-margin-top: 10px;
+
+@logo-margin-top: -15px;
+@logo-img-with: 225px;
+
+@header-background-position-top: -25px;
+@logo-facebook-width: 30px;
+
+@container-sneak-freddy-margin-top: 10px;
+@container-sneak-freddy-first-div-magin-top: 10px;
+
 body {
     background-color: #E9722A;   
     -webkit-font-smoothing: antialiased;
@@ -26,7 +41,6 @@ h2 {
 
 .navbar {
     background: url('../img/top-bar.png') repeat-x top center;
-    height: 120px;
     border: 0;
 }
 
@@ -36,7 +50,7 @@ h2 {
 
 .content {
     padding: 40px 15px;
-    font-size: 16px;
+    font-size: @content-font-size;
 }
 
 .content-long {
@@ -77,7 +91,7 @@ h2 {
 }
 
 .navbar-nav > li > a.logo-home > img {
-    width: 255px;
+    width: @logo-img-with;
 }
 
 .logo-home-brand img {
@@ -102,46 +116,38 @@ h2 {
 @media (max-width: 1200px) {
     .navbar-nav > li > a {
         padding: 0 20px !important;
-        line-height: 10px;
-        font-size: large !important;
-    }
-    
-    .navbar-nav > li > a { 
-        line-height: 30px !important;
-        font-size: 20px !important;
-    }
-    
-    .navbar-nav > li > a { 
-       display: block;
-       margin-top: 10px !important;
+        font-size: @nav-bar-font-size * 1.28 !important; //20px
+        line-height: @nav-bar-link-line-height * 3 !important;
+        display: block;
+        margin-top: @nav-bar-link-margin-top !important;
     }
     
     .navbar-nav > li > a.logo-home > img {
-        margin-top: -15px !important
+        margin-top: @logo-margin-top !important;
     }
 }
 
 @media (max-width: 1495px) {
     .navbar {
-        background-position: 0 -25px;
+        background-position: 0 @header-background-position-top;
     }
     
     .navbar-nav > li > a { 
         display: block;
-        margin-top: -15px;
+        margin-top: @nav-bar-link-margin-top - 20%;
     }
     
     .navbar-nav > li > a.logo-home > img { 
         display: block;
-        margin-top: 15px;
+        margin-top: -(@logo-margin-top); // 15px;
     }
     
     .navbar-nav >li > a.logo-facebook > img {
-        width: 30px;
+        width: @logo-facebook-width;
     }
     
     .navbar-nav > li > a.logo-home > img {
-        width: 220px
+        width: @logo-img-with;
     }
 }
 
@@ -153,12 +159,12 @@ h2 {
 
 @media (max-width: 992px) {    
     .navbar-nav > li > a.logo-home > img {
-        width: 150px;
+        width: @logo-img-with * 0.682; // 150px
     }
     
     .navbar-nav > li > a { 
-        line-height: 25px !important;
-        font-size: 17px !important;
+        line-height: @nav-bar-link-line-height * 2.5 !important; // 25px
+        font-size: @nav-bar-font-size * 0.96 !important;
         padding: 15px !important;
         margin-top: 0 !important;
     }
@@ -166,7 +172,7 @@ h2 {
 
 @media (max-width: 886px) {    
     .navbar-nav > li > a.logo-home > img {
-        width: 130px;
+        width: @logo-img-with * 0.591; // 130px;
     }
 }
 
@@ -177,11 +183,11 @@ h2 {
     
     .navbar-nav {
         background: #efefef !important;
-        margin-top: 0px
+        margin-top: 0px;
     }
 
     .navbar-nav > li > a {
-        line-height: 30px;
+        line-height: @nav-bar-link-line-height * 3 !important; // 30px
         border-bottom: 1px solid #dcdcdc;
     }
     
@@ -204,7 +210,7 @@ h2 {
     }
     
     .container-sneak-freddy {
-        margin-top: 200px
+        margin-top: @container-sneak-freddy-margin-top * 20; // 200px;
     }
     
     .navbar .navbar-nav {
@@ -220,23 +226,22 @@ h2 {
         display: none;
     }
 
-    .navbar-nav>li>a.logo-home {
+    .navbar-nav > li > a.logo-home {
         padding-top: 0;
         padding-bottom: 0;
         line-height: 0;
         display: block;
     }
 
-    .navbar-nav>li>a.logo-facebook {
-        padding-top: 0;
-        padding-bottom: 0;
+    .navbar-nav > li > a.logo-facebook {
+        padding: 0;
         line-height: 80px;
     }
 
     .navbar-nav > li > a {
         padding: 0 30px 0 30px;
-        line-height: 80px;
-        font-size: x-large;
+        line-height: @nav-bar-link-line-height * 8; // 80px;
+        font-size: @nav-bar-font-size * 1.3;
     }
     
     .mobile-version {
@@ -250,13 +255,13 @@ h2 {
 
 @media (max-width: 1231px) {
     .container-sneak-freddy div.first {
-        margin-top: 20px !important;
+        margin-top: @container-sneak-freddy-first-div-magin-top * 2 !important; // 20px
     }
 }
 
 @media (max-width: 863px) {
     .container-sneak-freddy div.first {
-        margin-top: 30px !important;
+        margin-top: @container-sneak-freddy-first-div-magin-top * 3 !important; // 30px
     }
 }
 
@@ -265,7 +270,7 @@ h2 {
 
 @media (max-width: 767px) {
     .container-sneak-freddy div.first {
-        margin-top: 70px !important;
+        margin-top: @container-sneak-freddy-first-div-magin-top * 7 !important; // 70px
     }
     
     .impressum {
@@ -275,6 +280,6 @@ h2 {
 
 @media (max-width: 364px) {
     .container-sneak-freddy div.first {
-        margin-top: 70px !important;
+        margin-top: @container-sneak-freddy-first-div-magin-top * 7 !important; // 70px
     }
 }
