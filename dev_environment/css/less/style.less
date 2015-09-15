@@ -44,6 +44,10 @@ h2 {
     border: 0;
 }
 
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 368px !important;
+}
+
 .container-long {
     background-color: rgba(255,255,255,0.7);
 }
@@ -63,12 +67,6 @@ h2 {
 
 .underline {
     text-decoration: underline;
-}
-
-.impressum {
-    position: absolute;
-    bottom: 0;
-    right: 10%;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -99,10 +97,48 @@ h2 {
     margin-top: -8px;
 }
 
-.impressum, .navbar-brand  {
+.navbar-brand  {
     display: none;
 }
 
+.story-span {
+    display: none;
+    float: right;
+}
+
+
+@story-font-color: #fff;
+
+#popup-story {
+    max-width: 54em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: none;
+    margin: 1em;
+    padding: 1em;
+    background: #000;
+    color: @story-font-color;
+    line-height: 1.7em;
+    border-radius: 6px;
+}
+
+    #popup-story > a {
+        margin: -0.5em;
+        float: right;
+        padding: 0 0.4em;
+        font-size: x-large !important;
+        color: @story-font-color !important;
+    }
+    
+    #popup-story > a:hover {
+        text-decoration: none;
+    }
+    
+a#open-story {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    color: #fff;
+}
 
 /************************************************ Breakpoits
 *****************************/
@@ -191,16 +227,21 @@ h2 {
         border-bottom: 1px solid #dcdcdc;
     }
     
-    .impressum, .navbar-brand {
+    .story-span, .navbar-brand {
         display: block;
     }
     
-    .navbar-nav > li > a.logo-facebook > img, .navbar-nav > .li-logo-home, .desktop-version {
+    .navbar-nav > .li-logo-home, .desktop-version {
         display: none;
     }
     
     .mobile-version {
         display: block;
+    }
+    
+    a#open-story {
+        top: 8%;
+        right: 4%;
     }
 }
 
@@ -248,7 +289,7 @@ h2 {
         display: none;
     }
     
-    .desktop-version, .impressum {
+    .desktop-version, .story-span {
         display: block;
     }
 }
@@ -273,7 +314,7 @@ h2 {
         margin-top: @container-sneak-freddy-first-div-magin-top * 7 !important; // 70px
     }
     
-    .impressum {
+    .story-span {
         display: none !important;
     }
 }

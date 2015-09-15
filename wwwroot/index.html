@@ -47,7 +47,7 @@
                 <li class="li-logo-home"><a href="/" class="logo-home"><img src="assets/img/sneaky_site_logo.png" /></a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="agb.html">AGB</a></li>
-                <li><a href="impressum.html" class="impressum">Impressum</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
                 <li><a href="https://www.facebook.com/AskFritz" class="logo-facebook"><img src="assets/img/facebook.png" /></a></li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -66,6 +66,19 @@
     </div>
 </div><!-- /.container -->
 
+<div><a href="#" id="open-story"><img src="assets/img/more.png" alt=""><span class="story-span">Wer ist Frecher Fritz?</span></a></div>
+
+<div id="popup-story">
+    <a href="#">×</a>
+    <p>
+        Die Schlange Frecher Fritz​​ wurde auf einer Insel in Brasilien geboren, wo man sich gegenseitig nicht hilft und immer böse zueinander ist. Diese Insel wird bewohnt von vielen Schlangen, die einander nicht mögen. Die gemeinen Kriechtiere sind böse und studieren an der Uni des Bösen, wie man richtig gemein zu anderen Leuten ist. Durch einen Unfall wurde Frecher Fritz verstrahlt und ist jetzt ein großer Superbösewicht.    
+    </p>
+    
+    <p>
+        Jetzt hat er eine Mission: Er reist um die ganze Welt, um Leute zu finden, die er nicht mag. Sein Ziel ist es, gemein zu ihnen zu sein und sie zum Weinen zu bringen. Polizei und Staatsanwaltschaft sind schon auf der Suche nach ihm, aber er ist clever und wendig, sodass sie ihn niemals fangen werden. Er wird in 60 Ländern auf der ganzen Welt gesucht - ob TOT oder LEBENDIG!!! Er macht es sich zur seiner Lebensaufgabe, das Leben der Menschen zu vergiften und er verteilt sein Gift durch die gemeinen Nachrichten. Deswegen leckt er sich gierig seine langen Zähne und schreibt den ganzen Tag lang fleißig SMS. Sei vorsichtig. Er ist der König der Beleidigung. Niemand konnte bisher gegen ihn gewinnen - fordere ihn heraus, wenn du dich traust!
+    </p>
+</div>
+  
 <!-- dev environment -->
 <!-- Bootstrap core JavaScript -->
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -78,6 +91,7 @@
 <script src="../dev_environment/js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
 
 <script src="../dev_environment/js/plugins/mobile-detect.min.js"></script>
+<script src="../dev_environment/js/plugins/jquery.popupoverlay.js"></script>
 <script src="../dev_environment/js/app/app.js"></script>
 <script src="../dev_environment/js/less.js"></script>
 <!--/ dev environment -->
@@ -85,6 +99,16 @@
 <!-- prod environment -->
 <!--<script src="assets/js/scripts-1.0.0.min.js"></script>-->
 <!--/ prod environment -->
+
+<script>
+$(document).ready(function() {
+    
+    $("#popup-story > a, #open-story").on('click', function() {
+        $('#popup-story').popup('toggle');
+    });
+
+});
+</script>
 
 </body>
 </html>
