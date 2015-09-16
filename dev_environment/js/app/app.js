@@ -22,7 +22,8 @@ function setUpClickToSms() {
         if(md.version('Version') == '8')
             clickToText = 'sms:82888&body=' + body;
         else
-            clickToText = 'sms:82888;body=' + body;
+            //clickToText = 'sms:82888;body=' + body;
+            clickToText = 'sms:82888&body=' + body;
     } else {
         clickToText = 'sms:82888?body=' + body;
     }

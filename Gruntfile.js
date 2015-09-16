@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     uglify: {
       sitejs : {
         files : {
-          'wwwroot/assets/js/scripts-1.0.0.min.js' : [
+          'wwwroot/assets/js/scripts-1.0.1.min.js' : [
             'node_modules/jquery/dist/jquery.min.js',
             'bower_components/bootstrap/dist/js/bootstrap.js',
             'dev_environment/js/app/*',
