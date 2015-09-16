@@ -22,7 +22,7 @@ function setUpClickToSms() {
         if(md.version('Version') == '8')
             clickToText = 'sms:82888&body=' + body;
         else
-            //clickToText = 'sms:82888;body=' + body;
+            //clickToText = 'sms:82888;body=' + body; --> the IOS8 is comming here and setting uo the wrong separation between the number and the body, need to check why the version 8 is not being recognized
             clickToText = 'sms:82888&body=' + body;
     } else {
         clickToText = 'sms:82888?body=' + body;
