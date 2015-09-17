@@ -14,7 +14,7 @@ function setUpClickToSms() {
     var md = new MobileDetect(window.navigator.userAgent);
     var clickToText = 'sms:82888';
     var ua = navigator.userAgent;
-    var body = "NAME VS FRTIZ";
+    var body = "NAME VS FRITZ";
     
     if(md.os() == 'AndroidOS') {
         clickToText = 'sms:82888?body=' + body;
